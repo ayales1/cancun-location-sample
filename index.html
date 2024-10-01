@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>cancun-location-sample</title>
+  <title>Cancun Coastal Adventures Map</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
 
@@ -19,7 +19,7 @@
 <body>
 
   <!-- Display the map and title with HTML division tags  -->
-  <div id="map-title">leaflet-map-simple1</div>
+  <div id="map-title">Cancun Coastal Adventures</div>
   <div id="map"></div>
 
   <!-- Create the interactive map content with JavaScript (.js) -->
@@ -27,8 +27,8 @@
 
   /* Set up the initial map center and zoom level */
   var map = L.map('map', {
-    center: [21.131011, -86.821873], // EDIT coordinates to re-center map
-    zoom: 12,  // EDIT from 1 (zoomed out) to 18 (zoomed in)
+    center: [21.1619, -86.8515], // Coordinates for Cancun
+    zoom: 13,  // Set zoom level appropriate for Cancun
     scrollWheelZoom: false
   });
 
@@ -40,9 +40,9 @@
         <a href="https://carto.com/attribution">CARTO</a>'
   }).addTo(map);
 
-  /* Display a point marker with pop-up text */
-  L.marker([41.77, -72.69]).addTo(map) // EDIT marker coordinates
-  .bindPopup("Insert pop-up text here"); // EDIT pop-up text message
+  /* Display a point marker with pop-up text for a popular Cancun destination */
+  L.marker([21.1619, -86.8515]).addTo(map) // Coordinates for a Cancun marker
+  .bindPopup("Welcome to Cancun! Enjoy the sunny beaches and the vibrant culture."); // Pop-up text for the location
 
   </script>
 </body>
