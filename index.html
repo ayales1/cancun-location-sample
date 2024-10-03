@@ -1,49 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Cancun Coastal Adventures Map</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8">
-
-  <!-- Load Leaflet code library: see https://leafletjs.com/download.html -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
-  <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
-
-  <!-- Position the map and title with Cascading Style Sheet (CSS) -->
-  <style>
-  body { margin:0; padding:0; }
-  #map { position: absolute; top:0; bottom:0; right:0; left:0; }
-  #map-title { position: relative; margin-top: 10px; margin-left: 50px; float: left; background: white; border: 2px solid rgba(0,0,0,0.2); padding: 6px 8px; font-family: Helvetica; font-weight: bold; font-size: 24px; z-index: 800; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancun Adventures</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <h1>Cancun Hotel Zone Map</h1>
+    
+    <!-- Google Maps Embed Code -->
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.7636654297316!2d-86.83142158488359!3d21.135501585943025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2b7473824ed7%3A0x79fbdb846e93faec!2sHotel%20Zone%2C%20Canc%C3%BAn%2C%20Quintana%20Roo%2C%20Mexico!5e0!3m2!1sen!2sus!4v1696340045164!5m2!1sen!2sus" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
 
-  <!-- Display the map and title with HTML division tags  -->
-  <div id="map-title">Cancun Coastal Adventures</div>
-  <div id="map"></div>
-
-  <!-- Create the interactive map content with JavaScript (.js) -->
-  <script>
-
-  /* Set up the initial map center and zoom level */
-  var map = L.map('map', {
-    center: [21.1619, -86.8515], // Coordinates for Cancun
-    zoom: 13,  // Set zoom level appropriate for Cancun
-    scrollWheelZoom: false
-  });
-
-  /* display basemap tiles -- see others at https://leaflet-extras.github.io/leaflet-providers/preview/ */
-  L.tileLayer(
-    'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; <a href="https://osm.org/copyright">\
-        OpenStreetMap</a> contributors, &copy;\
-        <a href="https://carto.com/attribution">CARTO</a>'
-  }).addTo(map);
-
-  /* Display a point marker with pop-up text for a popular Cancun destination */
-  L.marker([21.1619, -86.8515]).addTo(map) // Coordinates for a Cancun marker
-  .bindPopup("Welcome to Cancun! Enjoy the sunny beaches and the vibrant culture."); // Pop-up text for the location
-
-  </script>
 </body>
 </html>
