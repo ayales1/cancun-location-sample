@@ -1,0 +1,17 @@
+/* Ale's House In Cancun */
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: #007bff; /* Caribbean blue */
+    background-color: #ffdf00; /* Sunny yellow */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1::after {
+    content: "Cancun Adventures";
+    font-size: 24px;
+    display: block;
+    color: #ff5733; /* Sunset orange */
+}
